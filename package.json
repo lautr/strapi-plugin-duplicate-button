@@ -1,0 +1,25 @@
+{
+  "name": "strapi-plugin-duplicate-button",
+  "version": "1.0.1",
+  "description": "Adds a Duplicate Button to the edit view",
+  "strapi": {
+    "name": "duplicate-button",
+    "description": "Adds a Duplicate Button to the edit view",
+    "kind": "plugin",
+    "displayName": "Duplicate Button"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "Johannes Lauter"
+  },
+  "maintainers": [
+    {
+      "name": "Johannes Lauter"
+    }
+  ],
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
