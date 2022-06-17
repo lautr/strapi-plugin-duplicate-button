@@ -1,11 +1,11 @@
 <div align="center" width="150px">
-  <img style="width: 150px; height: auto;" src="./doc/logo-128.png" alt="Logo - Strapi Duplicate Button" />
+  <img style="width: 150px; height: auto;" src="doc/logo-128.png" alt="Logo - Strapi Duplicate Button" />
 </div>
 
 # Strapi Plugin Duplicate Button
 > Adds a Duplicate Button to the edit view
 
-![](./doc/screen.jpg)
+![](doc/screen.jpg)
 
 ## How to Install
 
