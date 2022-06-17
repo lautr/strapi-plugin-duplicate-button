@@ -9,6 +9,9 @@
     "displayName": "Duplicate Button"
   },
   "dependencies": {},
+  "peerDependencies": {
+    "@strapi/strapi": "^4.0.0"
+  },
   "author": {
     "name": "Johannes Lauter"
   },
