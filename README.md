@@ -13,15 +13,15 @@ Copy the following code and run from your terminal
 
 ```
 #yarn
-yarn add @lautr/strapi-plugin-duplicate-button
+yarn add strapi-plugin-duplicate-button
 ```
 ```
 #pnpm
-pnpm add @lautr/strapi-plugin-duplicate-button
+pnpm add strapi-plugin-duplicate-button
 ```
 ```
 #npm
-npm install @lautr/strapi-plugin-duplicate-button
+npm install strapi-plugin-duplicate-button
 ```
 
 Add the following attribute in the `config/plugins.js` file:
