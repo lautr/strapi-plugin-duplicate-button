@@ -27,7 +27,6 @@ export default {
       locales.map(locale => {
         return import(`./translations/${locale}.json`)
           .then(({ default: data }) => {
-            console.log(prefixPluginTranslations(data, pluginId))
             return {
               data: prefixPluginTranslations(data, pluginId),
               locale,
