@@ -24,7 +24,14 @@ pnpm add strapi-plugin-duplicate-button
 npm install strapi-plugin-duplicate-button
 ```
 
-Add the following attribute in the `config/plugins.js` file:
+The plugin should now be active and show the duplicate button.
+
+## How to use
+After activation of the Plugin, click the Duplicate Button in the edit view.
+
+## Troubleshooting
+If the duplicate button does not whow up, try adding the following attribute in the `config/plugins.js` file:
+
 ```
 'duplicate-button': true
 ```
@@ -34,6 +41,3 @@ module.exports = () => ({
   'duplicate-button': true,
 });
 ```
-
-## How to use
-After activation of the Plugin, click the Duplicate Button in the edit view.
