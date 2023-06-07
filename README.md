@@ -41,3 +41,7 @@ module.exports = () => ({
   'duplicate-button': true,
 });
 ```
+
+## Issues
+
+Please reprot any Issues on [GitHub](https://github.com/lautr/strapi-plugin-duplicate-button/issues/new).
