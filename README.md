@@ -44,4 +44,4 @@ module.exports = () => ({
 
 ## Issues
 
-Please reprot any Issues on [GitHub](https://github.com/lautr/strapi-plugin-duplicate-button/issues/new).
+Please report any issues on [GitHub](https://github.com/lautr/strapi-plugin-duplicate-button/issues/new).
