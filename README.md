@@ -30,7 +30,7 @@ The plugin should now be active and show the duplicate button.
 After activation of the Plugin, click the Duplicate Button in the edit view.
 
 ## Troubleshooting
-If the duplicate button does not whow up, try adding the following attribute in the `config/plugins.js` file:
+If the duplicate button does not show up, try adding the following attribute in the `config/plugins.js` file:
 
 ```
 'duplicate-button': true
