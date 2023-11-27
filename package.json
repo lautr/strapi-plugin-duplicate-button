@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-duplicate-button",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Adds a Duplicate Button to the edit view",
   "strapi": {
     "name": "duplicate-button",
@@ -21,7 +21,7 @@
     }
   ],
   "engines": {
-    "node": ">=14.19.1 <=18.x.x"
+    "node": ">=14.19.1 <=20.x.x"
   },
   "license": "MIT"
 }
