@@ -2,6 +2,7 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { useHistory } from "react-router-dom";
 import { Button } from "@strapi/design-system/Button";
+import { AxiosError } from 'axios';
 import Duplicate from "@strapi/icons/Duplicate";
 import { useCMEditViewDataManager, useFetchClient } from "@strapi/helper-plugin";
 
