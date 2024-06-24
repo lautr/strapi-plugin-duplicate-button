@@ -1,14 +1,12 @@
 import React from "react";
 import { useIntl } from "react-intl";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { Button } from "@strapi/design-system/Button";
-import { AxiosError } from 'axios';
 import Duplicate from "@strapi/icons/Duplicate";
-import { useCMEditViewDataManager, useFetchClient } from "@strapi/helper-plugin";
+import { useCMEditViewDataManager } from "@strapi/helper-plugin";
 
 const DuplicateButton = () => {
   const { modifiedData, layout, isSingleType } = useCMEditViewDataManager();
-  const { post } = useFetchClient();
 
   const {
     push,
@@ -16,29 +14,15 @@ const DuplicateButton = () => {
   } = useHistory();
 
   const { formatMessage } = useIntl();
+  const { search } = useLocation();
 
-  // copied from https://github.com/strapi/strapi/blob/v4.24.2/packages/core/admin/admin/src/content-manager/pages/ListView/ListViewPage.tsx#L542
-  const handleCloneClick = async () => {
-    try {
-      const { data } = await post(
-        `/content-manager/collection-types/${layout.uid}/auto-clone/${modifiedData.id}`
-      );
-
-      if ('id' in data) {
-        const copyPathname = pathname.replace(`/${modifiedData.id}`, `/${data.id}`);
-        push({
-          pathname: `${copyPathname}`,
-          state: {from: pathname}
-        });
-      }
-    } catch (err) {
-      if (err instanceof AxiosError) {
-        console.error(err)
-        const {prohibitedFields} = err.response?.data.error.details;
-        setClonedEntryId(modifiedData.id);
-        setProhibitedCloningFields(prohibitedFields);
-      }
-    }
+  const handleDuplicate = () => {
+    const copyPathname = pathname.replace(layout.uid, `${layout.uid}/create/clone`);
+    push({
+      pathname: copyPathname,
+      state: { from: pathname },
+      search: search,
+    });
   };
 
   const content = {
@@ -50,7 +34,7 @@ const DuplicateButton = () => {
   return (
     <>
       {modifiedData.id && (
-        <Button variant="secondary" startIcon={<Duplicate />} onClick={handleCloneClick}>
+        <Button variant="secondary" startIcon={<Duplicate />} onClick={handleDuplicate}>
           {formatMessage(content)}
         </Button>
       )}
