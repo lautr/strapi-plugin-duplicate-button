@@ -1,0 +1,13 @@
+# dependencies
+node_modules
+
+# misc
+.DS_Store
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# build
+/admin/dist

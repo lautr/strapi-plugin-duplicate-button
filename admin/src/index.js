@@ -1,8 +1,8 @@
-import { prefixPluginTranslations } from '@strapi/helper-plugin';
-import pluginPkg from '../../package.json';
-import pluginId from './pluginId';
-import Initializer from './components/Initializer';
-import DuplicateButton from './components/DuplicateButton'
+import pluginPkg from "../../package.json";
+import DuplicateButton from "./components/DuplicateButton";
+import Initializer from "./components/Initializer";
+import pluginId from "./pluginId";
+import prefixPluginTranslations from "./prefixPluginTranslations";
 
 const name = pluginPkg.strapi.name;
 
@@ -17,14 +17,16 @@ export default {
   },
 
   bootstrap(app) {
-    app.injectContentManagerComponent('editView', 'right-links', {
-      name: 'DuplicateButton',
-      Component: DuplicateButton,
-    });
+    app
+      .getPlugin("content-manager")
+      .injectComponent("editView", "right-links", {
+        name: pluginId,
+        Component: DuplicateButton,
+      });
   },
   async registerTrads({ locales }) {
     const importedTrads = await Promise.all(
-      locales.map(locale => {
+      locales.map((locale) => {
         return import(`./translations/${locale}.json`)
           .then(({ default: data }) => {
             return {
